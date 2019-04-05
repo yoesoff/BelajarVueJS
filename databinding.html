@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Binding</title>
+</head>
+<body>
+
+	<div id="app">
+		<h1 :id="judul">{{judul}}</h1>
+
+		<a v-bind:href="url">{{url}}</a> <br/>
+		<a :href="url">same : {{url}}</a>
+	</div>
+
+</body>
+	<!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		new Vue({
+            el: '#app',
+            data: {
+            	judul: 'data aja',
+                url: 'https://www.google.com/'
+            }
+        });
+	</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string interpolation</title>
+</head>
+<body>
+
+	<div id="app">
+		<h2>{{message.split('').reverse().join()}}</h2>
+		<h2>{{number}}</h2>
+		<h2>{{ (isActive)? 'Active' : 'Inactive' }}</h2>
+	</div>
+
+</body>
+	<!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		let vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello',
+                number: 10,
+                isActive: true
+            }
+        });
+	</script>
+</html>
