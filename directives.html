@@ -12,7 +12,11 @@
 		<h2 v-on:click="number++" >Up</h2>
 		<h2 @click="number--" >Down</h2>
 
-		{{number}}
+		<h3>{{number}}</h3>
+
+		<form action="#" v-on:submit.prevent="number++">
+			<button type="submit">Submit</button>
+		</form>
 	</div>
 
 </body>

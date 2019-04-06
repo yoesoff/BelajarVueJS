@@ -2,11 +2,21 @@
 <html>
 <head>
 	<title>Document</title>
+	<style type="text/css">
+		.active {
+			color: green;
+		}
+
+		.notactive {
+			color: red;
+		}
+	</style>
 </head>
 <body>
 
 	<div id="app">
-		<h1>{{message}}</h1>
+		<h1 v-bind:class="{active: isActive, notactive: !isActive}">{{name}}</h1>
+		<h1 v-bind:class="[isActive? 'active' : 'notactive' ]">{{name}}</h1>
 	</div>
 
 </body>
@@ -17,7 +27,8 @@
 		var vm = new Vue({
             el: '#app',
             data: {
-                message: 'Hello'
+            	isActive: true,
+                name: 'Joko Tole'
             }
         });
 	</script>
