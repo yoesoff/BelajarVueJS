@@ -1,0 +1,32 @@
+
+<div id="app">
+	<posts inline-template>
+        <h1 v-on:click="display">{{ message2 }}</h1>
+    </posts>
+</div>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script type="text/javascript">
+
+    Vue.component('posts', {
+        data(){
+            return {
+                message2: "Hello" 
+            }
+        },
+        methods: {
+            display() {
+                console.log("clicked!");
+            }
+        }
+    });
+
+	var vm = new Vue({
+        el: '#app',
+        data: {
+            message: "Hai hai" 
+        },
+    });
+</script>

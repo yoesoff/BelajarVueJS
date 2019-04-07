@@ -1,0 +1,33 @@
+<!-- development version, includes helpful console warnings -->
+<script src="vue.js"></script>
+
+<div id="app">
+	<posts v-bind:nama="'Yusuf'"></posts>
+</div>
+
+<script type="text/javascript">
+
+    Vue.component('posts', {
+        props: ['nama'],
+        template: `
+            <h1 @click="display">{{ message2 }} {{ nama }}</h1>
+        `,
+        data: () => {name
+            return {
+                message2: "Hello hai "
+            }
+        },
+        methods: {
+            display() {
+                console.log("clicked!");
+            }
+        }
+    });
+
+	var vm = new Vue({
+        el: '#app',
+        data: {
+            message: "Hai hai" 
+        },
+    });
+</script>
