@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="app">
+		<h1>Yusuf Baim {{ isActive == 'active'? 'is active' : 'not active' }} </h1>
+		<input type="text" v-bind="isActive" />
+	</div>
+
+</body>
+	<!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+            el: '#app',
+            data: {
+                isActive: 'not active'
+            },
+
+            watch: {
+            	isActive: function(newVal) {
+            		console.log(newVal);
+            	}
+            }
+        });
+	</script>
+</html>

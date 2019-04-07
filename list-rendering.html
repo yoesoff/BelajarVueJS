@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post List</title>
+</head>
+<body>
+
+	<div id="app">
+		<ul>
+			<li v-for="post in posts">
+				<h2>{{ post.title }}</h2>
+				<p>{{ post.body }}</p>
+			</li>
+		</ul>
+	</div>
+
+</body>
+	<!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+            el: '#app',
+            data: {
+            	posts: [
+            		{id: 1, title:'title1', body: 'Lorem ipsum dolor sit amet1'},
+            		{id: 2, title:'title2', body: 'Lorem ipsum dolor sit amet2'},
+            		{id: 3, title:'title3', body: 'Lorem ipsum dolor sit amet3'},
+            	]
+            }
+        });
+	</script>
+</html>
